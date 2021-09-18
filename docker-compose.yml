@@ -1,8 +1,5 @@
 version: '3'
 
-volumes:
-  vendor-store:
-  node_modules-store:
 
 services:
   php:
@@ -10,8 +7,6 @@ services:
     build: ./docker/php
     volumes:
     - ./server:/var/www
-    - vendor-store:/var/www/laravel/vendor
-    - node_modules-store:/var/www/laravel/node_modules
     environment:
       TZ: Asia/Tokyo
 
